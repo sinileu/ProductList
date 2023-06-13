@@ -1,1 +1,373 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: #ffffff;
+}
+
+.section-products {
+  background: black;
+}
+
+.container {
+  background: rgb(3, 114, 70);
+  max-width: 95%;
+  // min-width: 100vh;
+}
+
+.product_main {
+  padding: 5px;
+  margin: 2px;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.section-products {
+    padding: 10px 0 10px;
+}
+
+.section-products .header {
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+.section-products .header h3 {
+    font-size: 1rem;
+    color: #fe302f;
+    font-weight: 500;
+}
+
+.section-products .header h2 {
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: aliceblue;
+}
+
+.section-products .single-product {
+    margin-bottom: 26px;
+}
+
+.section-products .single-product .part-1 {
+    position: relative;
+    height: 290px;
+    max-height: 290px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    padding: 5px;
+    margin: 5px;
+}
+
+.product-card {
+  border: 2px solid rgb(228, 232, 220);
+  // border-radius: 2px;
+  // padding: 3px;
+  // margin: 1px;
+}
+
+.section-products .single-product .part-1::before {
+		position: absolute;
+		content: "";
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		transition: all 0.3s;
+}
+
+.section-products .single-product .part-1 ul {
+    position: absolute;
+    bottom: -41px;
+    left: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    opacity: 0;
+    transition: bottom 0.5s, opacity 0.5s;
+}
+
+.section-products .single-product:hover .part-1 ul {
+    bottom: 30px;
+    opacity: 1;
+}
+
+.section-products .single-product .part-1 ul li {
+    display: inline-block;
+    margin-right: 4px;
+}
+
+.section-products .single-product .part-1 ul li a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #ffffff;
+    color: #444444;
+    text-align: center;
+    box-shadow: 0 2px 20px rgb(50 50 50 / 10%);
+    transition: color 0.2s;
+}
+
+.section-products .single-product .part-1 ul li a:hover {
+  color: #fe302f;
+}
+
+.section-products .single-product .part-2 .product-title {
+    font-size: 1rem;
+}
+
+.section-products .single-product .part-2 h4 {
+    display: inline-block;
+    font-size: 1.2rem;
+}
+
+
+.section-products .single-product .part-2 .product-price {
+  color: rgb(212, 218, 233);
+  font-weight: 600;
+}
+
+
+
+
+// ---------------------------------- carousel --------------------------------------------
+
+.container-xl {
+  background: aliceblue;
+  // max-width: 95%;
+}
+
+.featured-products {
+	color: #000;
+	font-size: 26px;
+	font-weight: 300;
+	text-align: center;
+	text-transform: uppercase;
+	position: relative;
+	margin: 30px 0 60px;
+}
+.featured-products::after {
+	content: "";
+	width: 100px;
+	position: absolute;
+	margin: 0 auto;
+	height: 4px;
+	border-radius: 1px;
+	background: #7ac400;
+	left: 0;
+	right: 0;
+	bottom: -20px;
+}
+.carousel {
+	margin: 50px auto;
+	padding: 0 70px;
+  max-height: 100vh !important;
+}
+.carousel .item {
+	color: #747d89;
+	min-height: 325px;
+	text-align: center;
+	overflow: hidden;
+}
+.carousel .thumb-wrapper {
+	padding: 25px 15px;
+	background: #fff;
+	border-radius: 6px;
+	text-align: center;
+	position: relative;
+	box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+}
+.carousel .item .img-box {
+	height: 120px;
+	margin-bottom: 20px;
+	width: 100%;
+	position: relative;
+}
+.carousel .item img {
+	max-width: 100%;
+	max-height: 100%;
+	display: inline-block;
+	position: absolute;
+	bottom: 0;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+}
+.carousel .item h4 {
+	font-size: 20px;
+  color: #1f6a04;
+  font-weight: 500;
+}
+.carousel .item h4, .carousel .item p, .carousel .item ul {
+	margin-bottom: 5px;
+}
+.carousel .thumb-content .btn {
+	color: #7ac400;
+	font-size: 11px;
+	text-transform: uppercase;
+	font-weight: bold;
+	background: none;
+	border: 1px solid #7ac400;
+	padding: 6px 14px;
+	margin-top: 5px;
+	line-height: 16px;
+	border-radius: 20px;
+}
+.carousel .thumb-content .btn:hover, .carousel .thumb-content .btn:focus {
+	color: #fff;
+	background: #7ac400;
+	box-shadow: none;
+}
+.carousel .thumb-content .btn i {
+	font-size: 14px;
+	font-weight: bold;
+	margin-left: 5px;
+}
+.carousel .item-price {
+	font-size: 16px;
+	padding: 2px 0;
+  color: #3b5998;
+}
+.carousel .item-price strike {
+	opacity: 0.7;
+	margin-right: 5px;
+}
+.carousel-control-prev, .carousel-control-next {
+	height: 44px;
+	width: 40px;
+	background: #7ac400;
+	margin: auto 0;
+	border-radius: 4px;
+	opacity: 0.8;
+}
+.carousel-control-prev:hover, .carousel-control-next:hover {
+	background: #78bf00;
+	opacity: 1;
+}
+.carousel-control-prev i, .carousel-control-next i {
+	font-size: 36px;
+	position: absolute;
+	top: 50%;
+	display: inline-block;
+	margin: -19px 0 0 0;
+	z-index: 5;
+	left: 0;
+	right: 0;
+	color: #fff;
+	text-shadow: none;
+	font-weight: bold;
+}
+.carousel-control-prev i {
+	margin-left: -2px;
+}
+.carousel-control-next i {
+	margin-right: -4px;
+}
+.carousel-indicators {
+	bottom: -50px;
+}
+.carousel-indicators li, .carousel-indicators li.active {
+	width: 10px;
+	height: 10px;
+	margin: 4px;
+	border-radius: 50%;
+	border: none;
+}
+.carousel-indicators li {
+	background: rgba(0, 0, 0, 0.2);
+}
+.carousel-indicators li.active {
+	background: rgba(0, 0, 0, 0.6);
+}
+.carousel .wish-icon {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	z-index: 99;
+	cursor: pointer;
+	font-size: 16px;
+	color: #abb0b8;
+}
+.carousel .wish-icon .fa-heart {
+	color: #ff6161;
+}
+.star-rating li {
+	padding: 0;
+}
+.star-rating i {
+	font-size: 14px;
+	color: #ffc000;
+}
+
+
+
+// ---------------------- social media icons --------------------------------------------
+
+ul.socialIcons {
+  padding: 0;
+  text-align: center;
+}
+
+.socialIcons li {
+  background-color: yellow;
+  list-style: none;
+  display: inline-block;
+  margin: 4px;
+  border-radius: 2em;
+  overflow: hidden;
+}
+
+.socialIcons li a {
+  display: block;
+  padding: 0.7em;
+  min-width: 2.28571429em;
+  max-width: 2.28571429em;
+  height: 2.28571429em;
+  white-space: nowrap;
+  line-height: 0.5em; /*it's working only when you write text with icon*/
+  transition: 0.5s;
+  text-decoration: none;
+  font-family: arial;
+  color: #fff;
+}
+
+.socialIcons li i {
+  font-size: 50px !important;
+  margin-right: 0.5em;
+}
+
+.socialIcons li:hover a {
+  max-width: 200px;
+  padding-right: 1em;
+}
+
+.socialIcons .facebook {
+  background-color: #3b5998;
+  box-shadow: 0 0 16px #3b5998;
+}
+
+.socialIcons .twitter {
+  background-color: #00aced;
+  box-shadow: 0 0 16px #00aced;
+}
+
+.socialIcons .instagram {
+  background-color: #cd486b;
+  box-shadow: 0 0 16px #cd486b;
+}
+
+.socialIcons .pinterest {
+  background-color: #c92228;
+  box-shadow: 0 0 16px #c92228;
+}
+
+.socialIcons .linkedin {
+  background-color: #146f07;
+  box-shadow: 0 0 16px #025e1b;
+}
